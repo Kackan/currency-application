@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Cantor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+<header>
+
+</header>
+
+<main>
+    <div class="container-flex-1">
+
+        <table class="cantor-table">
+        <tr><td>Name </td><td> Value for 1.0 <span th:text="${base}"></span> </td></tr>
+        <tr th:each="currency : ${currencies} ">
+            <td th:text="${currency.key}"></td>
+            <td th:text="${currency.value}"></td>
+            <td><a th:href="@{/form/(symbol=${currency.key},base=${base})}">details</a></td>
+        </tr>
+    </table>
+
+
+        <a th:href="@{/}">back</a>
+    </div>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

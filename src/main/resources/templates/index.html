@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cantor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="container-flex-1">
+
+<form th:method="GET" th:action="@{/currency}">
+
+    <label>Enter your base currency (use shortcut for example EUR): </label> <input th:type="text"  th:name="base">
+
+</form>
+
+</div>
+
+</body>
+</html>

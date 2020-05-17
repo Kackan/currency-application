@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="container-flex-1">
+
+<form th:method="POST" th:action="@{/details}" th:object="${detailsForm}">
+    Base:<td th:text="${param.base}"></td>
+    <input th:type="hidden" th:value="${param.base}"  th:attr="name='base'">
+    <br />
+    Symbol:<td th:text="${param.symbol}"></td>
+    <input th:type="hidden" th:value="${param.symbol}" th:attr="name='symbol'"/>
+    <br />
+    Start:<input th:type="date" th:field="*{start}"/>
+    <br />
+    End:<input th:type="date" th:field="*{end}"/>
+    <br />
+    <input th:type="submit" th:value="Submit">
+</form>
+
+
+    <a th:href="@{/currency(base=${param.base})}">back</a>
+</div>
+
+
+</body>
+</html>

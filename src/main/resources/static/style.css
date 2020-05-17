@@ -1,0 +1,20 @@
+body{
+}
+
+.container-flex-1{
+    display: flex;
+    width: 50%;
+}
+
+.cantor-table{
+    display: flex;
+}
+
+td{
+    width: 150px;
+}
+
+.container-2{
+
+
+}
